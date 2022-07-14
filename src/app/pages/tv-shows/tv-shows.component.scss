@@ -1,0 +1,59 @@
+@import '../../../styles/colors';
+//
+:host ::ng-deep {
+    .p-tabview-nav {
+        justify-content: center;
+        // li .p-tabview-nav-link {
+        //     background-color: $bgColor;
+        // }
+        // li.p-highlight .p-tabview-nav-link {
+        //     background-color: $bgColor;
+        // }
+    }
+}
+
+.poster {
+    max-width: 100%;
+}
+
+.images {
+    max-width: 100%;
+    display: flex;
+}
+
+.overview {
+    line-height: 1.5;
+}
+
+.stat {
+    display: flex;
+    margin-bottom: 15px;
+    .label {
+        font-weight: bold;
+        width: 150px;
+    }
+    .value {
+        color: $lightGray;
+    }
+}
+
+.actor {
+    //padding-top: 5rem;
+    padding: 3rem 1rem 3rem 0;
+    width: 100%;
+    img {
+        width: 100%;
+        border-radius: 50%;
+        border: 1px solid $lightGray;
+    }
+    h4 {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+.search-grid {
+    display: flex;
+    justify-content: center;
+}

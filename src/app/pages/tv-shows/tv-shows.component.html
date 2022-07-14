@@ -1,0 +1,27 @@
+<!-- <pre> {{tvShows | json}}</pre> -->
+<div class="container">
+    <!-- Search -->
+    <div class="search-grid">
+        <div class="">
+            <span class="p-input-icon-right mt-0 m-3">
+                <input type="text" pInputText placeholder="Search" [(ngModel)]="searchValue" (keyup)="searchKeyUp()" />
+                <i class="pi pi-search"></i>
+            </span>
+        </div>
+    </div>
+    <!-- Movies -->
+    <div class="grid">
+        <!-- <app-item-banner [items]="topRatedTvShows" title="Top Rated TV Shows:"></app-item-banner>
+        <app-item-banner [items]="popularTvShows" title="Popular TV Shows:"></app-item-banner>
+        <app-item-banner [items]="onTheAirTvShows" title="On The Air TV Shows:"></app-item-banner> -->
+        <!--  -->
+        <div class="col-6 md:col-3 lg:col-2" *ngFor="let tv of tvShows">
+            <app-item [itemData]="tv"></app-item>
+        </div>
+    </div>
+    <!-- Paginator -->
+    <div class="pagi">
+        <p-paginator [rows]="20" [totalRecords]="10000" (onPageChange)="paginate($event)">
+        </p-paginator>
+    </div>
+</div>
